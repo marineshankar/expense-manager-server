@@ -5,11 +5,14 @@ import { auth } from "./auth.js";
 import { userRouter } from "./pages/userRouter.js";
 import { settingsRouter } from "./pages/settingsRouter.js";
 import { billsRouter } from "./pages/billsRouter.js";
+import dotenv from 'dotenv';
 
+dotenv.config()
 export const app = express();
-const port = 5000;
+// const port = 5000;
+const port = process.env.PORT || 5000;
 // const MONGO_URL = "mongodb://localhost";
-const MONGO_URL = "mongodb+srv://Shankar:Sowmiya3191@cluster0.juv47.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const MONGO_URL = process.env.MONGO_URL;
 
 app.use(express.json());
 app.use(cors({
