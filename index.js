@@ -21,6 +21,10 @@ app.use(cors({
 
 app.listen(port, () => console.log(`Server is listening on Port no : ${port}`));
 
+app.get("/", (request, response) => {
+    response.send("Home Page");
+})
+
 async function createConnection() {
     const client = new MongoClient(MONGO_URL);
     await client.connect();
