@@ -5,9 +5,10 @@ import { auth } from "./auth.js";
 import { userRouter } from "./pages/userRouter.js";
 import { settingsRouter } from "./pages/settingsRouter.js";
 import { billsRouter } from "./pages/billsRouter.js";
-// import dotenv from 'dotenv';
+import dotenv from 'dotenv';
 
 dotenv.config()
+
 export const app = express();
 // const port = 5000;
 const port = process.env.PORT || 5000;
