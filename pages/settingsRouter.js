@@ -5,6 +5,7 @@ import { client } from "../index.js";
 const router = express.Router();
 
 router.route("/").put(async (request, response) => {
+    console.log('settings');
     const setting = request.body;
     const result = await client
         .db("expenseManager")
