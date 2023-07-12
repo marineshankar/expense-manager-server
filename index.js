@@ -73,7 +73,7 @@ app.post("/sms", async (request, response) => {
 })
 
 app.post("/smsOutResponse", (request, response) => {
-    console.log('smsOutResponse', request.body);
+    console.log('smsOutResponse request', request);
     response.send(request.body);
 })
 
